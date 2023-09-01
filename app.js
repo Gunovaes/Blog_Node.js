@@ -121,7 +121,7 @@ app.get("/categorias/:slug", (req, res) => {
 });
 
 // Porta
-const porta = 8081;
+const porta = 3333;
 app.listen(porta, () => {
     console.log("O servidor foi iniciado corretamente na porta", porta);
 });
