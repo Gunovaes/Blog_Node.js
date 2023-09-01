@@ -1,0 +1,21 @@
+<h2>Publicações da categoria {{categoria.titulo}}</h2>
+{{#each post}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h2>{{titulo}}</h2>
+            <p class="mt-4">
+                {{descricao}}
+            </p>
+            <a style="text-decoration: none;" href="/post/{{slug}}">
+                <button class="Button">Leia Mais
+                    <div class="animation-container">Clique para ver mais sobre o tema</div>
+                </button>
+            </a>
+            <hr>
+            <div class="title-date-container">
+                <small>{{data}}</small>
+            </div>
+        </div>
+    </div>
+{{else}}
+{{/each}}
