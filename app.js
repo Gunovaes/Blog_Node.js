@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
+const path = require("path")
 const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("connect-flash");
@@ -52,6 +53,8 @@ app.use((req, res, next) => {
         console.log("Conectado ao banco");
     }).catch(err => console.error("Erro ao conectar ao banco:", err));
 
+//path
+app.use(express.static((path.join(__dirname,"public"))))
 
 //rotas
 app.use("/admin", admin);
