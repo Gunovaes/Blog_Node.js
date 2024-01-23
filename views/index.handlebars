@@ -1,0 +1,42 @@
+<div class="bg-light p-5 rounded-lg m-3">
+    <h1 class="display-4">Bem vindo ao Blog Novaes</h1>
+    <p class="lead">Este é um blog completo que foi desenvolvido com <Node class="Js"> + Express + MongoDB</Node></p>
+    <hr class="my-4">
+    <p>Criado por &copy;gunovaes, este blog é resultado de um curso completo de node JS ministrado por Victor Lima do @Guia do Programador, mas com diversas mudanças na estilização e na estrutura do blog, alem de algumas funcionalidades extras que eu adicionei.</p>
+    <p>Para ver alguns recursos a mais que o blog oferece dentro das rotas de administração como criar, editar ou deletar categorias e publicações, basta pegar o login de administrador no meu <a target="_blank" href="https://github.com/Gunovaes">Git Hub</a>, se autenticar como moderador do blog e entrar na administração dele pela barra de navegação. Estou cedendo o acesso únicamente pelo fato de que este blog foi construido apenas para fins ditáticos, não tenho a intenção de utilizá-lo no futuro, também valhe ressaltar que você pode se sentir avontade para criar, editar ou excluir as publicações existentes, já que este blog é apenas uma cópia do meu projeto original, faça bom uso do acesso.</p>
+    <p>Obs: As senhas de todos os usuários serão "hasheadas" (criptografadas) no banco de dados, ou seja, sinta-se a vontade caso você queira utilizar alguma senha pessoal. Como o blog não possui restições para senhas inseguras é provável que caso você venha a utilizar algum senha muito básica o Chrome te alerte sobre possivel vazamento da senha.</p>
+{{#unless user}}
+    <h5>Login de Administrador disponível no repositório do blog</h5>
+    <h6>*Após criar uma conta ainda é necessário fazer login!</h6>
+    <p class="mt-4">
+        <a class="btn btn-primary btn-lg" href="/usuario/registro" role="button">Crie uma conta</a>
+        <a class="btn btn-primary btn-lg" href="/usuario/login" role="button">Entre</a>
+    </p>
+{{/unless}}
+</div>
+<br>
+<hr>
+<h2>Publicações recentes</h2>
+
+{{#each post}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h2>{{titulo}}</h2>
+            <p class="mt-4">
+                {{descricao}}
+            </p>
+            <a style="text-decoration: none;" href="/post/{{slug}}">
+                <button class="Button">Leia Mais
+                    <div class="animation-container">Clique para ver mais sobre o tema</div>
+                </button>
+            </a>
+            <hr>
+            <div class="title-date-container">
+                <small>Categoria: {{categoria.titulo}}</small>
+                <br>
+                <small>Data de publicação: <a class="mx-1" style="text-decoration: none; color: black;">{{data}}</a></small>
+            </div>
+        </div>
+    </div>
+{{else}}
+{{/each}}

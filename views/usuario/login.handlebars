@@ -1,0 +1,23 @@
+<h4>Entre ou Cadastre-se</h4>
+<div class="card mt-4">
+    <div class="card-body">
+        <form action="/usuario/login" method="post">
+            <label for="usuario">Usuário: </label>
+            <input type="text" name="usuario" id="user" class="form-control" required>
+            <br>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" class="form-control" required>
+            <p>
+                <div class="gray">Ainda não possui cadastro? Clique em <a style="text-decoration: none; " href="/usuario/registro">Criar Conta</a>!</div>
+            </p>
+            <button type="submit" class="button mt-1">Entrar</button>
+            <button type="button" id="criarContaButton" class="button mt-1 mx-2">Criar Conta</button>
+            <br>
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById("criarContaButton").addEventListener("click", function() {
+        window.location.href = "/usuario/registro";
+    });
+</script>

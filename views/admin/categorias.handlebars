@@ -1,0 +1,31 @@
+<a href="categorias/novacategoria"><button class="button mt-2">Criar nova categoria</button></a>
+<a href="/admin"><button class="button mt-2">Ver lista de publicações</button></a>
+<br>
+
+<h2 class="mt-4">Últimas categorias</h2>
+<hr>
+
+{{#each categoria}}
+<div class="card mt-4">
+    <div class="card-body">
+            <h4>{{titulo}}</h4>
+        <p class="mt-3">
+            {{slug}}
+        </p>
+        <div class="button-group">
+            <a href="/admin/editcategoria/{{_id}}" class="btn-asn mx-2">
+                <button type="button" class="Button">🖋️
+                    <div class="animation-container"> Editar</div>
+                </button>
+            </a>
+            <form action="/admin/deletcategoria" method="post">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="Button">🗑️
+                    <div class="animation-container">Deletar</div>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{{else}}
+{{/each}}

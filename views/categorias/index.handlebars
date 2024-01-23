@@ -1,0 +1,15 @@
+<h2>Lista de Categorias: </h2>
+<p>
+    <h4 style="color: #043606;">Clique sobre alguma categoria para ler mais publicações</h4>
+</p>
+<br>
+{{#each categoria}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <a style="text-decoration: none; color: #4caf50" href="/categorias/{{slug}}">
+                <h2>{{titulo}}</h2>
+            </a>
+        </div>
+    </div>
+{{else}}
+{{/each}}

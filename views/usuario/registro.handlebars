@@ -1,0 +1,38 @@
+{{#each erros}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+{{/each}}
+
+<h4>Entre ou Cadastre-se</h4>
+<div class="card mt-4">
+    <div class="card-body">
+        <form action="registro" method="post">
+            <p>
+                <label for="nome">Usuário: </label>
+                <input type="text" name="usuario" class="form-control">
+            </p>
+            <p>
+                <label for="nome">Email: </label>
+                <input type="email" name="email" class="form-control">
+            </p>
+            <p>
+                <label for="senha">Senha: </label>
+                <input type="password" name="senha" class="form-control">
+            </p>
+            <p>
+                <label for="senhaconfirm">Repita sua senha: </label>
+                <input type="password" name="senhaconfirm" class="form-control">
+            </p>
+            <p>
+                <div class="gray">Já está cadastrado? Clique em <a style="text-decoration: none;" href="/usuario/login">Entrar</a> e faça Login!</div>
+            </p>
+            <button type="submit" class="button mt-1">Criar Conta</button>
+            <a href="/usuario/login"><button type="button" id="entrarButton" class="button mt-1 mx-2">Entrar</button></a>
+        </form>      
+    </div>
+</div>
+<script>
+    document.getElementById("entrarButton").addEventListener("click", function() {
+        window.location.href = "/usuario/login";
+    });
+</script>

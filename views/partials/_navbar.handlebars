@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Blog do Novaes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <form action="post" method="post">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categorias">Categorias</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Administrador
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Solicitar acesso de administrador</a></li>
+            <li><a class="dropdown-item" href="/admin">Sou administrador</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/usuario/login">Entrar como administrador</a></li>
+          </ul>
+        </li>
+      </ul>
+      {{#unless user}}
+      <!-- Barra de login e cadastro quando o usuário NÃO está logado -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/usuario/registro">Cadastre-se</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/usuario/login">Login</a>
+        </li>
+      </ul>
+      {{/unless}}
+      {{#if user}}
+      <span style="color: white;"><div id="usuario">Olá 🙃 </div></span>
+      <a class="nav-link" href="/usuario/logout" style="color: rgb(252, 9, 9); text-decoration: none;">Sair da conta</a>
+      {{/if}}
+    </div>
+  </div>
+</nav>
+  
+
