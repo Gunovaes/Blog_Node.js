@@ -1,9 +1,9 @@
-# Blog Novaes - Universo do Desenvolvedor
+# Blog Novaes - Espaço do Desenvolvedor
 Bem-vindo ao Blog Novaes, espaço dedicado ao mundo do desenvolvimento e programação! Aqui, compartilharemos conhecimentos, experiências e dicas sobre as tecnologias mais usadas do mercado. Sinta-se à vontade para explorar e contribuir.
 
 ## Acesso de Administrador
 
-Para acessar o painel de administrador do Blog Novaes, preencha as informações de usuário e senha abaixo:
+Para acessar o painel de administrador do blog, preencha as informações de usuário e senha abaixo:
 
 - **Usuário**: ADMIN
 - **Senha**: Admin@2024
