@@ -1,4 +1,4 @@
-# Blog Novaes - Espaço do Desenvolvedor
+# Blog Novaes - Universo do Desenvolvedor
 Bem-vindo ao Blog Novaes, espaço dedicado ao mundo do desenvolvimento e programação! Aqui, compartilharemos conhecimentos, experiências e dicas sobre as tecnologias mais usadas do mercado. Sinta-se à vontade para explorar e contribuir.
 
 ## Acesso de Administrador
