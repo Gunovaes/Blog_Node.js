@@ -1,5 +1,8 @@
 # Blog Novaes - Universo do Desenvolvedor
-Bem-vindo ao **[Blog Novaes](https://blog-novaes-nodejs.vercel.app/)**, espaço dedicado ao mundo do desenvolvimento e programação. Aqui, compartilharemos conhecimentos, experiências e dicas sobre as tecnologias mais usadas do mercado. Sinta-se à vontade para explorar e contribuir.
+Bem-vindo ao Blog Novaes, espaço dedicado ao mundo do desenvolvimento e programação. Aqui, compartilharemos conhecimentos, experiências e dicas sobre as tecnologias mais usadas do mercado. Sinta-se à vontade para explorar e contribuir.
+
+Acesso: para visualizar o blog, basta acessar o projeto por meio de qualquer navegador web através do link:
+https://blog-novaes-nodejs.vercel.app/
 
 ## Acesso de Administrador
 
